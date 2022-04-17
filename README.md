@@ -1,7 +1,7 @@
 
 # MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions
 
-This project is a source code of [MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions](https://www.nuget.org/packages/MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions/) nuget package. This package contains abstractions for some design patterns.
+This project is a source code of [MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions](https://www.nuget.org/packages/MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions/) nuget package. This package contains abstractions for validator design patterns.
 
 
 ## Labels
