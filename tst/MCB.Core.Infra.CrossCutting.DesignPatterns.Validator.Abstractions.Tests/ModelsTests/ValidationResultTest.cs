@@ -36,5 +36,22 @@ namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Test
             validationResult.ValidationMessageCollection.Should().NotBeSameAs(validationResult.ValidationMessageCollection);
             validationResult.ValidationMessageCollection.Should().HaveCount(3);
         }
+
+        [Fact]
+        public void ValidationResult_Should_Correctly_Valid()
+        {
+            // Arrange and Act
+            var validationResult = new ValidationResult(new List<ValidationMessage>());
+
+            // Assert
+            validationResult.Should().NotBeNull();
+            validationResult.HasValidationMessage.Should().BeFalse();
+            validationResult.HasError.Should().BeFalse();
+            validationResult.IsValid.Should().BeTrue();
+
+            validationResult.ValidationMessageCollection.Should().NotBeNull();
+            validationResult.ValidationMessageCollection.Should().NotBeSameAs(validationResult.ValidationMessageCollection);
+            validationResult.ValidationMessageCollection.Should().HaveCount(0);
+        }
     }
 }
