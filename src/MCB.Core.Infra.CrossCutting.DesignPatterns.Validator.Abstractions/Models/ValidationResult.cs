@@ -2,7 +2,7 @@
 
 namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Models
 {
-    public class ValidationResult
+    public struct ValidationResult
     {
         // Fields
         private readonly List<ValidationMessage> _validationMessageCollection;
@@ -14,15 +14,8 @@ namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Mode
         public bool IsValid => !HasValidationMessage || !HasError;
 
         // Constructors
-        public ValidationResult()
-        {
-            _validationMessageCollection = new List<ValidationMessage>();
-        }
         public ValidationResult(ICollection<ValidationMessage> validationMessageCollection)
         {
-            /*
-             * This class receive a collection of ValidationMessage in constructor for can't add new ValidationMessage after instanciation
-             */
             _validationMessageCollection = validationMessageCollection.ToList();
         }
     }

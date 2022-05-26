@@ -2,7 +2,7 @@
 
 namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Models
 {
-    public class ValidationMessage
+    public struct ValidationMessage
     {
         // Properties
         public ValidationMessageType ValidationMessageType { get; }
