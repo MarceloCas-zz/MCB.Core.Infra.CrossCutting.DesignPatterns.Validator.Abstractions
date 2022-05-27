@@ -53,5 +53,35 @@ namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Test
             validationResult.ValidationMessageCollection.Should().NotBeSameAs(validationResult.ValidationMessageCollection);
             validationResult.ValidationMessageCollection.Should().HaveCount(0);
         }
+
+        [Fact]
+        public void ValidationResult_Should_Deep_Clone()
+        {
+            // Arrange
+            var validationMessageCollection = new List<ValidationMessage>
+            {
+                new ValidationMessage(Enums.ValidationMessageType.Information, "1", "INFO"),
+                new ValidationMessage(Enums.ValidationMessageType.Warning, "2", "WARNING"),
+                new ValidationMessage(Enums.ValidationMessageType.Error, "3", "ERROR"),
+            };
+            var validationResult = new ValidationResult(validationMessageCollection);
+
+            // Act
+            var clonedValidationResult = validationResult.DeepClone();
+            validationResult = new ValidationResult(new List<ValidationMessage>());
+
+            // Assert
+
+            clonedValidationResult.Should().NotBeSameAs(validationResult);
+            clonedValidationResult.ValidationMessageCollection.Should().NotBeSameAs(validationResult.ValidationMessageCollection);
+            clonedValidationResult.Should().NotBeNull();
+            clonedValidationResult.HasValidationMessage.Should().BeTrue();
+            clonedValidationResult.HasError.Should().BeTrue();
+            clonedValidationResult.IsValid.Should().BeFalse();
+
+            clonedValidationResult.ValidationMessageCollection.Should().NotBeNull();
+            clonedValidationResult.ValidationMessageCollection.Should().NotBeSameAs(clonedValidationResult.ValidationMessageCollection);
+            clonedValidationResult.ValidationMessageCollection.Should().HaveCount(3);
+        }
     }
 }

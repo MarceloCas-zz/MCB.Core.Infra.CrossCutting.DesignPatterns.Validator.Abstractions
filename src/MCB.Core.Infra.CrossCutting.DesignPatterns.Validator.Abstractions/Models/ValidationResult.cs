@@ -18,5 +18,11 @@ namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Mode
         {
             _validationMessageCollection = validationMessageCollection.ToList();
         }
+
+        // Public Methods
+        public ValidationResult DeepClone()
+        {
+            return new ValidationResult(_validationMessageCollection.ToList());
+        }
     }
 }
