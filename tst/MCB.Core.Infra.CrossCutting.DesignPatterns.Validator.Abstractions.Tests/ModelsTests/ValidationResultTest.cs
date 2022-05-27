@@ -25,6 +25,7 @@ namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Test
 
             // Act
             var validationResult = new ValidationResult(validationMessageCollection);
+            var emptyValidationResult = new ValidationResult();
 
             // Assert
             validationResult.Should().NotBeNull();
@@ -35,10 +36,19 @@ namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Test
             validationResult.ValidationMessageCollection.Should().NotBeNull();
             validationResult.ValidationMessageCollection.Should().NotBeSameAs(validationResult.ValidationMessageCollection);
             validationResult.ValidationMessageCollection.Should().HaveCount(3);
+
+            emptyValidationResult.Should().NotBeNull();
+            emptyValidationResult.HasValidationMessage.Should().BeFalse();
+            emptyValidationResult.HasError.Should().BeFalse();
+            emptyValidationResult.IsValid.Should().BeTrue();
+
+            emptyValidationResult.ValidationMessageCollection.Should().NotBeNull();
+            emptyValidationResult.ValidationMessageCollection.Should().NotBeSameAs(validationResult.ValidationMessageCollection);
+            emptyValidationResult.ValidationMessageCollection.Should().HaveCount(0);
         }
 
         [Fact]
-        public void ValidationResult_Should_Correctly_Valid()
+        public void ValidationResult_Should_Valid()
         {
             // Arrange and Act
             var validationResult = new ValidationResult(new List<ValidationMessage>());

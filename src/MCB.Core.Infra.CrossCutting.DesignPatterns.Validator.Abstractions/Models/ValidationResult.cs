@@ -14,6 +14,10 @@ namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Mode
         public bool IsValid => !HasValidationMessage || !HasError;
 
         // Constructors
+        public ValidationResult()
+        {
+            _validationMessageCollection = new List<ValidationMessage>();
+        }
         public ValidationResult(ICollection<ValidationMessage> validationMessageCollection)
         {
             _validationMessageCollection = validationMessageCollection.ToList();
