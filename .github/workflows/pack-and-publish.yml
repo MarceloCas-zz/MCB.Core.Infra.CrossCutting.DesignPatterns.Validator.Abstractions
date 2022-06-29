@@ -26,7 +26,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore -c Release
     - name: Test
-      run: dotnet test -c Release --no-build --verbosity normal
+      run: dotnet test -c Release --no-build --verbosity normal .\tst\MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Tests\MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Tests.csproj
     - name: Pack
       run: dotnet pack -c Release src/MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions/MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.csproj /p:Version='${{ github.event.inputs.version }}'
     - name: Publish
