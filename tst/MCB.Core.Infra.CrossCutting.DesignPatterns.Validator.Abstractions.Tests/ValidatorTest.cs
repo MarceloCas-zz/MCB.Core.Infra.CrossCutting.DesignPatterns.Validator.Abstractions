@@ -31,11 +31,11 @@ public class CustomerValidator
         var validationMessageCollection = new List<ValidationMessage>();
 
         if (instance.Id == Guid.Empty)
-            validationMessageCollection.Add(new ValidationMessage(ValidationMessageType.Error, code: "CustomerGuidIsRequired", description: "Customer Id is Required"));
+            validationMessageCollection.Add(new ValidationMessage(ValidationMessageType.Error, Code: "CustomerGuidIsRequired", Description: "Customer Id is Required"));
         if(string.IsNullOrWhiteSpace(instance.Name))
-            validationMessageCollection.Add(new ValidationMessage(ValidationMessageType.Error, code: "CustomerNameIsRequired", description: "Customer Name is Required"));
+            validationMessageCollection.Add(new ValidationMessage(ValidationMessageType.Error, Code: "CustomerNameIsRequired", Description: "Customer Name is Required"));
         if (instance.BirthDate == default)
-            validationMessageCollection.Add(new ValidationMessage(ValidationMessageType.Error, code: "CustomerBirthDateIsRequired", description: "Customer BirthDate is Required"));
+            validationMessageCollection.Add(new ValidationMessage(ValidationMessageType.Error, Code: "CustomerBirthDateIsRequired", Description: "Customer BirthDate is Required"));
         else
         {
             /*
@@ -43,10 +43,10 @@ public class CustomerValidator
              */
             var age = DateTime.UtcNow.Year - instance.BirthDate.Year;
             if (age < 18)
-                validationMessageCollection.Add(new ValidationMessage(ValidationMessageType.Information, code: "CustomerIsUnderAge", description: "Customer is under age"));
+                validationMessageCollection.Add(new ValidationMessage(ValidationMessageType.Information, Code: "CustomerIsUnderAge", Description: "Customer is under age"));
         }
         if(!instance.IsActive)
-            validationMessageCollection.Add(new ValidationMessage(ValidationMessageType.Warning, code: "CustomerIsNotActive", description: "Customer is not active"));
+            validationMessageCollection.Add(new ValidationMessage(ValidationMessageType.Warning, Code: "CustomerIsNotActive", Description: "Customer is not active"));
 
         if (validationMessageCollection.Count > 0)
             return new ValidationResult(validationMessageCollection);
