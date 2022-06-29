@@ -2,7 +2,7 @@
 
 namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Models;
 
-public struct ValidationResult
+public record struct ValidationResult
 {
     // Fields
     private readonly List<ValidationMessage> _validationMessageCollection;
