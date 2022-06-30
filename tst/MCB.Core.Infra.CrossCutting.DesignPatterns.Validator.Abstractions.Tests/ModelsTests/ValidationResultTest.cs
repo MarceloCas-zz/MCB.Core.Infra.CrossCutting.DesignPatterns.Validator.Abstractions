@@ -1,10 +1,6 @@
 ﻿using FluentAssertions;
 using MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Tests.ModelsTests;

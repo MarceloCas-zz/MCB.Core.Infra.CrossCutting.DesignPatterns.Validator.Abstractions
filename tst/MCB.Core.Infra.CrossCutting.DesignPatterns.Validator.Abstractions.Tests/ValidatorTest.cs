@@ -1,10 +1,8 @@
-﻿using FluentAssertions;
-using MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions;
+﻿using MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions;
 using MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Enums;
 using MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
