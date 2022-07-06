@@ -1,4 +1,4 @@
 ﻿using Bechmarks.Benchs.ModelsBenchs;
 using BenchmarkDotNet.Running;
 
-var summary = BenchmarkRunner.Run(typeof(ValidationResultBench));
+BenchmarkRunner.Run(typeof(ValidationResultBench).Assembly);

@@ -9,6 +9,7 @@ namespace Bechmarks.Benchs.ModelsBenchs;
 [SimpleJob(RunStrategy.Throughput, launchCount: 1)]
 [HardwareCounters(HardwareCounter.BranchMispredictions, HardwareCounter.BranchInstructions)]
 [MemoryDiagnoser]
+[HtmlExporter]
 public class ValidationMessageBench
 {
     [Params(10, 1_000, 100_000, 1_000_000)]
