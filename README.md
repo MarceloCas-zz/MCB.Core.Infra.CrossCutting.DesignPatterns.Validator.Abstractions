@@ -44,18 +44,6 @@ This project is a source code of [MCB.Core.Infra.CrossCutting.DesignPatterns.Val
 
 **Language:** C#
 
-## Install
-
-- Package Manager
-```powershell
-Install-Package MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions -Version 0.6.0-alpha
-```
-
-- .NET CLI
-```bash
-dotnet add package MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions --version 0.6.0-alpha
-```
-
 ## Package Dependencies
 
 - .NET 6.0
