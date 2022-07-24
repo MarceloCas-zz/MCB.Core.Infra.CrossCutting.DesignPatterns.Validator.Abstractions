@@ -18,7 +18,7 @@ public record struct ValidationResult
     {
         _validationMessageCollection = new List<ValidationMessage>();
     }
-    public ValidationResult(ICollection<ValidationMessage> validationMessageCollection)
+    public ValidationResult(IEnumerable<ValidationMessage> validationMessageCollection)
     {
         _validationMessageCollection = validationMessageCollection.ToList();
     }
