@@ -7,7 +7,7 @@ This project is a source code of [MCB.Core.Infra.CrossCutting.DesignPatterns.Val
 ## Labels
 
 [![build-and-test](https://github.com/MarceloCas/MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions/actions/workflows/build-and-test.yml/badge.svg?branch=main)](https://github.com/MarceloCas/MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions/actions/workflows/build-and-test.yml)
-<a href="https://www.nuget.org/packages/MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions/"><img alt="Nuget" src="https://img.shields.io/nuget/v/MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions"></a>
+![Nuget](https://img.shields.io/nuget/v/MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions)
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MarceloCas_MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=MarceloCas_MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=MarceloCas_MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions&metric=coverage)](https://sonarcloud.io/summary/new_code?id=MarceloCas_MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions)
