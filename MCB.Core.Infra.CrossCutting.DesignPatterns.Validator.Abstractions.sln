@@ -11,7 +11,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tst", "tst", "{D9A49EDE-5C4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Tests", "tst\MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Tests\MCB.Core.Infra.CrossCutting.DesignPatterns.Validator.Abstractions.Tests.csproj", "{EBF73DFD-7528-43FA-99DA-2C56E2E4EC79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bechmarks", "tst\Bechmarks\Bechmarks.csproj", "{87CF771C-9142-45A2-95A8-7E36A14974AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bechmarks", "tst\Bechmarks\Bechmarks.csproj", "{87CF771C-9142-45A2-95A8-7E36A14974AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0D43FCBD-A009-412E-A2C6-98B038E3D8D5}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build-and-test.yml = .github\workflows\build-and-test.yml
+		.github\workflows\pack-and-publish.yml = .github\workflows\pack-and-publish.yml
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
